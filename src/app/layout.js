@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Nav from "./Nav";
+import Head from "next/head"; // ← ضيفي دي
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,9 +21,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-y0z2d..." // ← هتكون أطول شوية
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Nav />
         {children}
       </body>
     </html>
