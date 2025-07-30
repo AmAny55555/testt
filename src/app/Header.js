@@ -8,7 +8,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-[#1A4469] text-white px-[6%] py-3 shadow-md fixed top-0 left-0 w-full z-50">
+    <header className="bg-white text-[#051d34]/80 px-[6%] py-3 shadow-md fixed top-0 left-0 w-full z-50">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div>
