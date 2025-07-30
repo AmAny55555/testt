@@ -46,7 +46,7 @@ function Header() {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col gap-4 bg-[#051d34] px-2 py-4 rounded-lg shadow-md">
+        <div className="md:hidden mt-4 flex flex-col gap-4 bg-white  text-[#051d34]/80 px-2 py-4 rounded-lg shadow-md">
           {[
             "home",
             "about",
