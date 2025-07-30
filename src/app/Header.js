@@ -8,11 +8,11 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-[#002d62] text-[#8e98af] px-[6%] py-3 shadow-md fixed top-0 left-0 w-full z-50">
+    <header className="bg-[#30777d] text-white px-[6%] py-3 shadow-md fixed top-0 left-0 w-full z-50">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div>
-          <Image src="/brand.png" width={50} height={50} alt="logo" />
+          <Image src="/icone.png" width={50} height={50} alt="logo" />
         </div>
 
         {/* Desktop Links */}

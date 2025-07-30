@@ -1,65 +1,87 @@
+"use client"; // مهم جدًا لو في مجلد /app
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-function Main() {
+export default function Main() {
   return (
-    <div className="px-[6%] py-[20%]  md:py-[8%] bg-white">
-      <p className="text-[#30777d] font-bold text-3xl mb-4">WHO WE ARE</p>
-      <p className="text-[#555] leading-relaxed text-[15px]">
+    <div className="relative z-0 px-[6%] py-[12%] md:py-[6%] bg-gradient-to-b from-white to-[#f9fafb] overflow-hidden">
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-[#30777d] font-black text-4xl mb-6 text-center"
+      >
+        WHO WE ARE
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-[#4b5563] text-center max-w-4xl mx-auto leading-relaxed text-[15.5px]"
+      >
         Easily we make it simple! Wajal for software development and computer
         services. We focus on innovation in websites engineering solutions,
         optimization and fully configured in line with advanced technology as we
-        develop projects according to new technology and market demand. Also, we
-        are constantly devoting our efforts to improve the service quality which
-        contributes in growth clients websites, their competitiveness and their
-        profitability as we work within a management team that has extensive
-        experience in this field, and a group of professionals to serve our
-        customers, answer their inquiries and provide consultations with strong
-        knowledge and experience in various disciplines of information
-        technology.
-      </p>
+        develop projects according to new technology and market demand...
+      </motion.p>
 
-      <div className="mt-8 flex flex-col md:flex-row gap-6 bg-[#f0f4fa] rounded-xl shadow-md px-6 py-6">
-        {/* Images column */}
-        <div className="flex flex-col items-center gap-6 w-full md:w-1/2">
-          <Image
-            src="/311.webp"
-            width={180}
-            height={220}
-            alt="Team Member 1"
-            className="rounded-lg shadow-sm"
-          />
-          <Image
-            src="/332.webp"
-            width={180}
-            height={220}
-            alt="Team Member 2"
-            className="rounded-lg shadow-sm"
-          />
-        </div>
-
-        <div className="w-full md:w-1/2 text-[#13376b]">
-          <p className="text-2xl font-extrabold mb-4">Our Team</p>
-          <p className="leading-relaxed mb-6">
+      <div className="mt-16 flex flex-col-reverse md:flex-row items-center gap-10 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg px-8 py-10">
+        {/* Text section */}
+        <motion.div
+          initial={{ x: -40, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="w-full md:w-1/2 text-[#1e3a8a]"
+        >
+          <h2 className="text-2xl font-bold mb-5">Our Team</h2>
+          <p className="leading-relaxed text-[15px] mb-6">
             Our team is highly qualified, has the ability, motivation,
             enthusiasm and interest to continue training without fear of changes
-            in the job market or innovation. Our team possesses principles based
-            on knowledge, commitment to the project, teamwork and maintaining
-            excellence where the person is assessed based on his capabilities,
-            needs and motivations.
+            in the job market or innovation...
           </p>
 
-          <p className="text-2xl font-extrabold mb-3">Our Vision</p>
-          <p className="leading-relaxed">
+          <h2 className="text-2xl font-bold mb-3">Our Vision</h2>
+          <p className="leading-relaxed text-[15px]">
             To be a leading reference company in the market through our services
             quality, solutions provided to our customers, our innovative
-            personality, high qualifications and the continuous motivation of
-            our team.
+            personality...
           </p>
-        </div>
+        </motion.div>
+
+        {/* Image section */}
+        <motion.div
+          initial={{ x: 40, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="w-full md:w-1/2 flex justify-center gap-4"
+        >
+          <div className="relative">
+            <Image
+              src="/311.webp"
+              width={160}
+              height={210}
+              alt="Team 1"
+              className="rounded-xl shadow-xl transform hover:scale-105 transition duration-300"
+            />
+            <div className="absolute -bottom-5 -right-5 z-[-1]">
+              <Image
+                src="/332.webp"
+                width={160}
+                height={210}
+                alt="Team 2"
+                className="rounded-xl shadow-xl opacity-80 hover:scale-105 transition duration-300"
+              />
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
 }
-
-export default Main;
