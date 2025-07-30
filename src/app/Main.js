@@ -1,121 +1,63 @@
 import React from "react";
 import Image from "next/image";
-import New from "@/New";
 
 function Main() {
   return (
-    <div>
-      <div className="flex flex-col md:flex-row px-4 md:px-20 py-5 border-b border-gray-500 max-w-[90%] mx-auto gap-8">
-        <div className="w-full md:w-1/2">
-          <div className="mb-5 w-[280px] mx-auto flex items-center justify-center">
-            <Image
-              src="/b.webp"
-              alt="main-img"
-              width={280}
-              height={250}
-              className="rounded-md object-contain"
-            />
-          </div>
+    <div className="px-[6%] py-[20%]  md:py-[8%] bg-white">
+      <p className="text-[#30777d] font-bold text-3xl mb-4">WHO WE ARE</p>
+      <p className="text-[#555] leading-relaxed text-[15px]">
+        Easily we make it simple! Wajal for software development and computer
+        services. We focus on innovation in websites engineering solutions,
+        optimization and fully configured in line with advanced technology as we
+        develop projects according to new technology and market demand. Also, we
+        are constantly devoting our efforts to improve the service quality which
+        contributes in growth clients websites, their competitiveness and their
+        profitability as we work within a management team that has extensive
+        experience in this field, and a group of professionals to serve our
+        customers, answer their inquiries and provide consultations with strong
+        knowledge and experience in various disciplines of information
+        technology.
+      </p>
 
-          <div className="flex items-center gap-3 justify-center flex-wrap">
-            <Image
-              src="/55.jpeg"
-              alt="img-1"
-              width={60}
-              height={60}
-              className="rounded object-contain"
-            />
-            <Image
-              src="/4.webp"
-              alt="img-2"
-              width={50}
-              height={50}
-              className="rounded object-contain"
-            />
-            <Image
-              src="/55.jpeg"
-              alt="img-3"
-              width={60}
-              height={60}
-              className="rounded object-contain"
-            />
-            <Image
-              src="/11.jpeg"
-              alt="img-4"
-              width={60}
-              height={60}
-              className="rounded object-contain"
-            />
-          </div>
+      <div className="mt-8 flex flex-col md:flex-row gap-6 bg-[#f0f4fa] rounded-xl shadow-md px-6 py-6">
+        {/* Images column */}
+        <div className="flex flex-col items-center gap-6 w-full md:w-1/2">
+          <Image
+            src="/311.webp"
+            width={180}
+            height={220}
+            alt="Team Member 1"
+            className="rounded-lg shadow-sm"
+          />
+          <Image
+            src="/332.webp"
+            width={180}
+            height={220}
+            alt="Team Member 2"
+            className="rounded-lg shadow-sm"
+          />
         </div>
 
-        <div className="w-full md:w-1/2">
-          <p className="text-[#078176] text-sm font-extrabold mb-4 text-start">
-            Offer available now for a limited time!
+        <div className="w-full md:w-1/2 text-[#13376b]">
+          <p className="text-2xl font-extrabold mb-4">Our Team</p>
+          <p className="leading-relaxed mb-6">
+            Our team is highly qualified, has the ability, motivation,
+            enthusiasm and interest to continue training without fear of changes
+            in the job market or innovation. Our team possesses principles based
+            on knowledge, commitment to the project, teamwork and maintaining
+            excellence where the person is assessed based on his capabilities,
+            needs and motivations.
           </p>
 
-          <p className="font-extrabold text-2xl -mt-3">
-            Light Gray Top for Women
+          <p className="text-2xl font-extrabold mb-3">Our Vision</p>
+          <p className="leading-relaxed">
+            To be a leading reference company in the market through our services
+            quality, solutions provided to our customers, our innovative
+            personality, high qualifications and the continuous motivation of
+            our team.
           </p>
-
-          <p className="text-red-500 font-bold mt-2 text-sm">
-            <span className="text-gray-600"> Lorem </span>Ipsum
-          </p>
-
-          <p className="font-bold text-xl">$ 40</p>
-
-          <p className="text-gray-500 text-sm mb-4">
-            Lorem ipsum dolor sit amet.
-          </p>
-
-          <div className="flex flex-wrap gap-4">
-            <div className="text-gray-500 font-semibold">ipsum dolor</div>
-            <div className="text-[#078176] font-semibold">ipsum dolor</div>
-          </div>
-
-          <div className="flex gap-3 items-center mt-3 font-bold flex-wrap">
-            <span className="bg-[#078176] w-7 h-7 rounded-full flex items-center justify-center text-white">
-              L
-            </span>
-            <span>M</span>
-            <span>s</span>
-            <span>Xl</span>
-            <span>XXl</span>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-3 text-white mt-7">
-            <button className="bg-neutral-400 w-full sm:w-32 h-10 cursor-pointer">
-              Lorem ipsum
-            </button>
-            <button className="bg-[#078176] w-full sm:w-32 h-10 cursor-pointer">
-              dolor sit amet
-            </button>
-          </div>
-
-          <div className="text-gray-500 mt-5 font-bold">
-            consectetur adipiscing elit
-            <p className="text-black font-bold">
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-            </p>
-            <p className="text-gray-500 mt-5 font-bold mb-3">dolor sit amet</p>
-            <p className="text-black">adipiscing elit</p>
-            <p className="text-black">consectetur adipiscing</p>
-          </div>
-
-          <div>
-            <p className="text-[#078176] font-bold mt-2 mb-2">
-              Lorem ipsum dolor sit amet
-            </p>
-            <p className="text-gray-500 font-bold">
-              adipiscing elit adipiscing
-            </p>
-            <p className="text-gray-500 font-bold">adipiscing elit</p>
-            <p className="text-gray-500 font-bold">consectetur adipiscing</p>
-          </div>
         </div>
       </div>
-
-      <New />
     </div>
   );
 }
