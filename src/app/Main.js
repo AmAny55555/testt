@@ -24,7 +24,7 @@ export default function Main() {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-[#051d34]/80 text-center max-w-3xl mx-auto leading-relaxed text-[16px] md:text-[17px]"
+        className="text-[#051d34]/80 text-center max-w-3xl mx-auto leading-relaxed text-[16px] md:text-[17px] mb-10"
       >
         Easily we make it simple! Wajal for software development and computer
         services. We focus on innovation in websites engineering solutions,
@@ -33,57 +33,65 @@ export default function Main() {
       </motion.p>
 
       {/* البلوك الرئيسي */}
-      <div className="mt-20 flex flex-col-reverse md:flex-row items-center gap-12 bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl px-8 py-12">
-        {/* النص */}
-        <motion.div
-          initial={{ x: -40, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="w-full md:w-1/2 text-[#051d34]"
-        >
-          <h2 className="text-3xl font-bold mb-6 text-[#051d34] ">Our Team</h2>
-          <p className="leading-loose text-[15.5px] mb-8 text-[#051d34]/80">
-            Our team is highly qualified, has the ability, motivation,
-            enthusiasm and interest to continue training without fear of changes
-            in the job market or innovation...
-          </p>
+      <div className="relative py-20 px-6 md:px-[10%] bg-gradient-to-br from-white via-[#f9f9fb] to-[#eef3f8] rounded-3xl shadow-2xl overflow-hidden">
+        {/* خلفية ديكورية */}
+        <div className="absolute top-[-80px] left-[-80px] w-[300px] h-[300px] bg-[#cde1f3] rounded-full blur-3xl opacity-30 z-0" />
+        <div className="absolute bottom-[-100px] right-[-60px] w-[250px] h-[250px] bg-[#fbd0f7] rounded-full blur-3xl opacity-30 z-0" />
 
-          <h2 className="text-3xl font-bold mb-4 text-[#051d34] ">
-            Our Vision
-          </h2>
-          <p className="leading-loose text-[15.5px] text-[#051d34]/80">
-            To be a leading reference company in the market through our services
-            quality, solutions provided to our customers, our innovative
-            personality...
-          </p>
-        </motion.div>
+        <div className="relative z-10 flex flex-col-reverse md:flex-row items-center gap-16">
+          {/* النص */}
+          <motion.div
+            initial={{ x: -60, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="w-full md:w-1/2 text-[#051d34]"
+          >
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-[#051d34] to-[#3f617d] text-transparent bg-clip-text">
+              Our Team
+            </h2>
+            <p className="text-[16px] leading-relaxed mb-8 text-[#051d34]/85">
+              Our team is highly qualified, has the ability, motivation,
+              enthusiasm and interest to continue training without fear of
+              changes in the job market or innovation...
+            </p>
 
-        {/* الصور */}
-        <motion.div
-          initial={{ x: 40, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="w-full md:w-1/2 flex justify-center items-center relative"
-        >
-          <div className="relative w-[170px] h-[220px]">
-            <Image
-              src="/311.webp"
-              fill
-              alt="Team 1"
-              className="rounded-2xl object-cover shadow-2xl transform hover:scale-105 transition duration-300"
-            />
-          </div>
-          <div className="absolute bottom-[-20px] right-[-20px] w-[140px] h-[190px] z-[-1]">
-            <Image
-              src="/332.webp"
-              fill
-              alt="Team 2"
-              className="rounded-2xl object-cover shadow-xl opacity-90 hover:scale-105 transition duration-300"
-            />
-          </div>
-        </motion.div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-[#051d34] to-[#3f617d] text-transparent bg-clip-text">
+              Our Vision
+            </h2>
+            <p className="text-[16px] leading-relaxed text-[#051d34]/85 ">
+              To be a leading reference company in the market through our
+              services quality, solutions provided to our customers, our
+              innovative personality...
+            </p>
+          </motion.div>
+
+          {/* الصور */}
+          <motion.div
+            initial={{ x: 60, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="w-full md:w-1/2 relative flex justify-center items-center"
+          >
+            <div className="relative w-[190px] h-[240px] rotate-[-4deg] hover:rotate-0 transition-all duration-300 ease-in-out z-20">
+              <Image
+                src="/311.webp"
+                fill
+                alt="Team 1"
+                className="rounded-3xl object-cover shadow-2xl"
+              />
+            </div>
+            <div className="absolute bottom-[-30px] right-[-30px] w-[150px] h-[200px] z-10 rotate-[6deg] hover:rotate-0 transition-all duration-300 ease-in-out">
+              <Image
+                src="/332.webp"
+                fill
+                alt="Team 2"
+                className="rounded-3xl object-cover shadow-xl opacity-95"
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
