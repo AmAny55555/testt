@@ -6,7 +6,10 @@ import { motion } from "framer-motion";
 
 export default function Main() {
   return (
-    <div className="relative z-0 px-[6%] py-[12%] md:py-[6%] bg-gradient-to-b from-white to-[#f9fafb] overflow-hidden">
+    <div
+      className="relative z-0 px-[6%] py-[18
+    %] md:py-[6%] bg-gradient-to-b from-white to-[#f9fafb] overflow-hidden"
+    >
       <motion.p
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
